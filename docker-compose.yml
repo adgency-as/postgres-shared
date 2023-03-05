@@ -1,0 +1,21 @@
+services:
+  db-dev:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: leadwiesel2
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./.postgresql:/var/lib/postgresql/data:rw
+    ports:
+      - 5433:5432
+  # db-test:
+  #   image: postgres:latest
+  #   environment:
+  #     POSTGRES_DB: leadwiesel2
+  #     POSTGRES_USER: root
+  #     POSTGRES_PASSWORD: postgres
+  #   volumes:
+  #     - ./.postgresql:/var/lib/postgresql/data:rw
+  #   ports:
+  #     - 5433:5432
